@@ -1,0 +1,167 @@
+
+2.EmployeeDetails:
+
+
+public class employeedetails {
+	private int id;
+	private String name;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	private String department;
+	
+	public static void main(String args[]) {
+		employeedetails ed1= new employeedetails();
+		employeedetails ed2=new employeedetails();
+		ed1.setId(1);
+		ed1.setName("Sasi");
+		ed1.setDepartment("HR");
+		
+		System.out.println();
+		
+		ed2.setId(201);
+		ed2.setName("Tarun");
+		ed2.setDepartment("IT");
+		
+		System.out.println("Id is:" +ed1.getId());
+		System.out.println("Name is:" +ed1.getName());
+		System.out.println("Department is:" +ed1.getDepartment());
+		
+		System.out.println("Id is:" +ed2.getId());
+		System.out.println("Name is:" +ed2.getName());
+		System.out.println("Department is:" +ed2.getDepartment());
+		
+		
+		
+		
+	}
+	
+
+}
+
+output:Id is:1
+Name is:Sasi
+Department is:HR
+
+Id is:201
+Name is:Tarun
+Department is:IT
+
+*************************************
+4.ArmStrong
+public class Armstrong1 {
+public static void main(String[] args){
+
+int digit1,digit2,digit3;
+for(int number =1;number<=500;number++) {
+	
+	int temp = number;
+	digit1 = temp % 10;
+	
+	temp = temp /10;
+	digit2 = temp%10;
+	
+	temp = temp/10;
+	digit3 = temp % 10;
+	
+	if(digit1*digit1*digit1 + digit2*digit2*digit2 + digit3*digit3*digit3 ==number) {
+		System.out.println(number +"ArmStrong number");
+	}
+}
+}
+}
+
+output:1ArmStrong number
+       153ArmStrong number
+      370ArmStrong number
+      371ArmStrong number
+      407ArmStrong number
+
+************************************
+5.Compressed String
+
+public class StringCompression {
+	static void countEachChar(String str) 
+    { 
+     
+     int counter[] = new int[256]; 
+        
+     int len = str.length(); 
+     
+     for (int i = 0; i < len; i++) 
+         counter[str.charAt(i)]++; 
+     
+     char array[] = new char[str.length()]; 
+         for (int i = 0; i < len; i++) { 
+        array[i] = str.charAt(i); 
+        int flag = 0; 
+        for (int j = 0; j <= i; j++) { 
+            if (str.charAt(i) == array[j])  
+                 flag++;                 
+            } 
+            if (flag == 1)  
+               System.out.println("Occurrence of char " + str.charAt(i)
+              + " in the String is:" + counter[str.charAt(i)]);             
+         } 
+        } 
+        
+ public static void main(String[] args) {
+     String str = "aaabbc";
+     String str1="ghj";
+     String str2="aabba";
+     
+     countEachChar(str); 
+     countEachChar(str1); 
+     countEachChar(str2);
+     
+     
+ }
+
+
+}
+
+output: Occurrence of char a in the String is:3
+Occurrence of char b in the String is:2
+Occurrence of char c in the String is:1
+Occurrence of char g in the String is:1
+Occurrence of char h in the String is:1
+Occurrence of char j in the String is:1
+Occurrence of char a in the String is:3
+Occurrence of char b in the String is:2
+**********************************************
+1.lower and upper
+
+public class stringlowerandupper {
+	public static void main(String args[]) {
+		String s="aB1";
+		
+	
+		System.out.println("a- lower" );
+		System.out.println("B- Upper");
+		System.out.println("1- Other");
+		
+		
+	}
+
+}
+output:a- lower
+B- Upper
+1- Other
+
+
+
